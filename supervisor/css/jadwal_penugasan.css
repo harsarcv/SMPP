@@ -1,0 +1,260 @@
+/* PREMIUM SUPERVISOR UI - JADWAL (GREEN THEME) */
+
+.header {
+    /* linear-gradient(135deg, #0f2027, #203a43, #2c5364) -> Green Theme */
+    background: linear-gradient(135deg, #0a4225 0%, #004d26 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 10px 20px rgba(10, 66, 37, 0.15);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.date-badge {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.title-center {
+    text-align: center;
+    font-weight: 800;
+    color: #0a4225;
+    /* Dark Green */
+    font-size: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* STATS GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.stat-info h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0a4423;
+    /* Dark Green */
+}
+
+.stat-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stat-card.total .stat-icon {
+    background: #e3f2fd;
+    color: #1e88e5;
+}
+
+.stat-card.active .stat-icon {
+    background: #e8f5e9;
+    color: #43a047;
+}
+
+.stat-card.upcoming .stat-icon {
+    background: #fff8e1;
+    color: #ffa000;
+}
+
+/* SCHEDULE TABLE */
+.schedule-section {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin: 0 20px 40px;
+}
+
+.toolbar {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar-title {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+    font-weight: 700;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #555;
+    font-size: 13px;
+    outline: none;
+}
+
+.btn-refresh {
+    background: #f7f9fa;
+    border: 1px solid #ddd;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-refresh:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+    border-color: #1976d2;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.sv-jadwal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sv-jadwal-table th {
+    background: #f8f9fa;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+}
+
+.sv-jadwal-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #f9f9f9;
+    color: #333;
+    font-size: 14px;
+}
+
+.sv-jadwal-table tr:last-child td {
+    border-bottom: none;
+}
+
+.sv-jadwal-table tr:hover {
+    background: #fcfcfc;
+}
+
+.fw-bold {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.small-badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 6px;
+    background: #f0f0f0;
+    color: #666;
+    border-radius: 4px;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.shift-box {
+    color: #444;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fdfdfd;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.zone-box {
+    font-size: 13px;
+    color: #555;
+}
+
+.status-pill {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.st-active {
+    background: #d4edda;
+    color: #155724;
+    box-shadow: 0 2px 5px rgba(21, 87, 36, 0.1);
+}
+
+.st-done {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.st-wait {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.empty-view {
+    padding: 50px;
+    text-align: center;
+    color: #aaa;
+}
+
+.empty-view i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: block;
+}

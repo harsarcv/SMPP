@@ -1,0 +1,522 @@
+/* ============================================================ */
+/*   TABEL LAPORAN STYLING YANG KONSISTEN                      */
+/* ============================================================ */
+
+/* Tabel Modern */
+.laporan-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+    table-layout: fixed;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(10, 147, 184, 0.1);
+}
+
+.laporan-table thead {
+    background: linear-gradient(135deg, #0a4c66 0%, #08738d 100%);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.laporan-table th {
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.3px;
+}
+
+.laporan-table th:first-child {
+    border-top-left-radius: 16px;
+}
+
+.laporan-table th:last-child {
+    border-top-right-radius: 16px;
+    border-right: none;
+}
+
+.laporan-table th i {
+    margin-right: 8px;
+    opacity: 0.9;
+}
+
+/* Atur lebar kolom untuk tabel riwayat */
+.laporan-table.riwayat th:nth-child(1) { width: 22%; } /* Nama */
+.laporan-table.riwayat th:nth-child(2) { width: 20%; } /* Tanggal */
+.laporan-table.riwayat th:nth-child(3) { width: 20%; } /* Lokasi */
+.laporan-table.riwayat th:nth-child(4) { width: 15%; } /* GPS */
+.laporan-table.riwayat th:nth-child(5) { width: 23%; } /* Detail */
+
+/* Atur lebar kolom untuk tabel GPS */
+.laporan-table.gps th:nth-child(1) { width: 15%; } /* Laporan */
+.laporan-table.gps th:nth-child(2) { width: 25%; } /* Petugas */
+.laporan-table.gps th:nth-child(3) { width: 25%; } /* Zona */
+.laporan-table.gps th:nth-child(4) { width: 20%; } /* Tanggal */
+.laporan-table.gps th:nth-child(5) { width: 15%; } /* GPS */
+
+/* Baris Tabel */
+.laporan-table tbody tr {
+    border-bottom: 1px solid #f0f9ff;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.laporan-table tbody tr:nth-child(even) {
+    background-color: #f8fdff;
+}
+
+.laporan-table tbody tr:hover {
+    background-color: #e1f5fe;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(10, 147, 184, 0.1);
+}
+
+.laporan-table td {
+    padding: 14px 12px;
+    color: #0b4050;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f9ff;
+}
+
+.laporan-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Styling untuk kolom khusus */
+/* Kolom Nama */
+.petugas-link {
+    color: #0a93b8;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.petugas-link:hover {
+    color: #065a70;
+    text-decoration: underline;
+}
+
+/* Kolom Tanggal */
+.tanggal-display {
+    font-weight: 600;
+    color: #0a4c66;
+    font-size: 14px;
+}
+
+/* Kolom Lokasi */
+.lokasi-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.lokasi-rw {
+    font-weight: 700;
+    color: #08738d;
+    font-size: 13px;
+}
+
+.lokasi-name {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Badge GPS */
+.gps-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gps-valid {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    border: 1px solid #b1dfbb;
+}
+
+.gps-suspicious {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #856404;
+    border: 1px solid #ffdf7e;
+}
+
+.gps-fake {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.gps-unknown {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+}
+
+/* Tombol Detail */
+.btn-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #0a93b8 0%, #08738d 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-detail:hover {
+    background: linear-gradient(135deg, #08738d 0%, #065a70 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(10, 147, 184, 0.3);
+}
+
+.btn-detail:active {
+    transform: translateY(0);
+}
+
+/* Tabel Kosong */
+.table-empty-laporan {
+    padding: 40px 20px;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.table-empty-laporan i {
+    font-size: 36px;
+    color: #d1ecf1;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+
+/* Filter Section yang diperbaiki */
+.filter-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+.filter-group {
+    margin-bottom: 0;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #0b4050;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
+}
+
+.filter-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #d1ecf1;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.filter-input:focus {
+    outline: none;
+    border-color: #0a93b8;
+    box-shadow: 0 0 0 3px rgba(10, 147, 184, 0.2);
+}
+
+.filter-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #d1ecf1;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230a93b8'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #0a93b8;
+    box-shadow: 0 0 0 3px rgba(10, 147, 184, 0.2);
+}
+
+/* Tombol Terapkan */
+.btn-apply {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #0a93b8 0%, #08738d 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 46px;
+}
+
+.btn-apply:hover {
+    background: linear-gradient(135deg, #08738d 0%, #065a70 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 147, 184, 0.3);
+}
+
+/* Foto Caption yang diperbaiki */
+.foto-caption-improved {
+    width: 100%;
+    background: linear-gradient(135deg, #0a4c66 0%, #08738d 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 0 6px 20px rgba(10, 147, 184, 0.2);
+}
+
+.foto-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.foto-title i {
+    font-size: 18px;
+}
+
+.foto-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 5px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.foto-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.foto-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.foto-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.foto-item-improved {
+    min-width: 180px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.foto-item-improved:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.foto-item-improved img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.foto-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.foto-info-improved {
+    margin-top: 15px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Action Buttons */
+.action-row-improved {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-action {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fdff 100%);
+    border: 2px solid #0a93b8;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #0a93b8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-action:hover {
+    background: linear-gradient(135deg, #0a93b8 0%, #08738d 100%);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(10, 147, 184, 0.3);
+}
+
+/* Info Cards untuk Ringkasan */
+.info-cards-laporan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.info-card-laporan {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fdff 100%);
+    border: 1px solid #e1f5fe;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(10, 147, 184, 0.1);
+    transition: all 0.3s ease;
+}
+
+.info-card-laporan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(10, 147, 184, 0.2);
+}
+
+.info-card-laporan i {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info-card-laporan.valid i { color: #16a34a; }
+.info-card-laporan.suspicious i { color: #f97316; }
+.info-card-laporan.fake i { color: #e11d48; }
+
+.info-card-value {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.info-card-laporan.valid .info-card-value { color: #16a34a; }
+.info-card-laporan.suspicious .info-card-value { color: #f97316; }
+.info-card-laporan.fake .info-card-value { color: #e11d48; }
+
+.info-card-label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .filter-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .laporan-table {
+        font-size: 13px;
+    }
+    
+    .laporan-table th,
+    .laporan-table td {
+        padding: 12px 8px;
+    }
+    
+    .info-cards-laporan {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-row-improved {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .report-box {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 10px;
+    }
+    
+    .foto-item-improved {
+        min-width: 150px;
+    }
+    
+    .foto-item-improved img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Animation untuk tabel */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.laporan-table tbody tr {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.laporan-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.laporan-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.laporan-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.laporan-table tbody tr:nth-child(4) { animation-delay: 0.4s; }

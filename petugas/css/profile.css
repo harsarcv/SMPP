@@ -1,0 +1,494 @@
+:root {
+  --orange-main: #FF9470;
+  --orange-soft: #FFE1D7;
+  --text-dark: #333;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+/* === HEADER FIXED (IDENTIK DENGAN DASHBOARD) === */
+.dash-header {
+  background: var(--orange-main);
+  color: #fff;
+  padding: 15px 20px 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  z-index: 1000;
+  height: 100px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--white);
+}
+
+.logout-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* ==== PAGE WRAPPER ==== */
+.profile-page {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  width: 100%;
+  max-width: 412px;
+  padding: 20px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === FOTO PROFIL CUSTOM === */
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.photo-circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 10px solid var(--orange-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-circle img {
+  width: 120px;
+  opacity: 0.7;
+}
+
+.photo-circle .avatar-initials {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange-soft);
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 44px;
+  letter-spacing: 1px;
+}
+
+/* === BIODATA CARD === */
+.biodata-card {
+  background: var(--orange-soft);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nama-title,
+.nip-title {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.nama-value,
+.nip-value {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* STATUS */
+.status-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.status-item {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green {
+  background: #00d600;
+}
+
+.red {
+  background: #ef4444;
+}
+
+.gray {
+  background: #999;
+}
+
+.yellow {
+  background: #f59e0b;
+}
+
+.glow {
+  box-shadow: 0 0 8px 4px rgba(0, 214, 0, 0.35);
+  animation: pulse-glow 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 4px 2px rgba(0, 214, 0, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 10px 6px rgba(0, 214, 0, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 4px 2px rgba(0, 214, 0, 0.2);
+  }
+}
+
+/* PROGRESS BAR */
+.progress-title {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-wrapper input[type=range] {
+  width: 200px;
+}
+
+.progress-wrapper input[type=range].full {
+  accent-color: #FF9470;
+}
+
+.progress-wrapper input[type=range].full::-webkit-slider-runnable-track {
+  background: #FF9470;
+}
+
+.progress-wrapper input[type=range].full::-moz-range-track {
+  background: #FF9470;
+}
+
+.progress-count {
+  background: #FF9470;
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* === RATING CARD === */
+/* === NEW RATING STYLE (update UI sesuai mockup) === */
+.rating-card {
+  background: #FF9470;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.rating-title {
+  background: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 10px 0;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Shared bar style */
+.kpi-bar,
+.total-score-bar {
+  background: var(--orange-main);
+  width: 100%;
+  height: 22px;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.kpi-bar-fill,
+.total-score-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: #ffffff;
+  position: relative;
+}
+
+/* Bar text */
+.kpi-bar .kpi-value,
+.total-score-bar .total-score-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--orange-main);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: white;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Text Kiri */
+/* text summary removed in favor of bars */
+
+/* Wrapper lingkaran */
+/* circle UI removed */
+
+/* === FOOTER (IDENTIK SEMUA HALAMAN) === */
+.footer-btns {
+  width: 412px;
+  height: 81px;
+  background-color: var(--orange-main);
+  padding-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-wrapper {
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.circle-btn {
+  width: 104px;
+  height: 104px;
+  background-color: var(--orange-soft);
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-btn img {
+  width: 50px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large phones (414px - 480px) */
+@media (max-width: 480px) {
+  .profile-page {
+    width: 100%;
+    margin: 100px 0 100px;
+    padding: 15px;
+  }
+
+  .dash-header {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer-btns {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Medium phones (375px - 414px) */
+@media (max-width: 414px) {
+  .dash-header {
+    height: 90px;
+    padding: 12px 15px 18px;
+  }
+
+  .header-title {
+    font-size: 20px;
+  }
+
+  .logout-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .profile-page {
+    margin-top: 110px;
+    margin-bottom: 90px;
+  }
+
+  .photo-circle {
+    width: 150px;
+    height: 150px;
+    border-width: 8px;
+  }
+
+  .photo-circle img {
+    width: 100px;
+  }
+
+  .photo-circle .avatar-initials {
+    width: 100px;
+    height: 100px;
+    font-size: 38px;
+  }
+
+  .status-row {
+    gap: 15px;
+  }
+
+  .status-item {
+    font-size: 14px;
+  }
+
+  .progress-wrapper input[type=range] {
+    width: 160px;
+  }
+
+  .circle-btn {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle-btn img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Small phones (320px - 375px) */
+@media (max-width: 375px) {
+  .dash-header {
+    height: 80px;
+    padding: 10px 12px 15px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  .profile-page {
+    margin-top: 90px;
+    margin-bottom: 80px;
+    padding: 10px;
+  }
+
+  .photo-circle {
+    width: 130px;
+    height: 130px;
+    border-width: 6px;
+  }
+
+  .photo-circle img {
+    width: 90px;
+  }
+
+  .biodata-card {
+    padding: 15px;
+  }
+
+  .nama-title,
+  .nip-title {
+    font-size: 16px;
+  }
+
+  .nama-value,
+  .nip-value {
+    font-size: 13px;
+  }
+
+  .status-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .progress-wrapper input[type=range] {
+    width: 140px;
+  }
+
+  .footer-btns {
+    height: 70px;
+  }
+
+  .footer-wrapper {
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+
+  .circle-btn {
+    width: 75px;
+    height: 75px;
+  }
+
+  .circle-btn img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra small phones (< 320px) */
+@media (max-width: 320px) {
+  .dash-header {
+    height: 70px;
+  }
+
+  .photo-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .progress-wrapper {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .progress-wrapper input[type=range] {
+    width: 100%;
+  }
+
+  .circle-btn {
+    width: 65px;
+    height: 65px;
+  }
+
+  .circle-btn img {
+    width: 35px;
+    height: 35px;
+  }
+}

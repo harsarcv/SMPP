@@ -1,0 +1,430 @@
+:root {
+  --orange-main: #FF9470;
+  --orange-soft: #FFE1D7;
+  --text-dark: #333;
+  --white: #fff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.dashboard {
+  width: 412px;
+  height: 917px;
+  background: var(--white);
+  position: relative;
+}
+
+/* HEADER */
+.dash-header {
+  background: var(--orange-main);
+  color: #fff;
+  padding: 15px 20px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  z-index: 1000;
+  height: 100px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  cursor: pointer;
+  flex: 1;
+}
+
+.user-info h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 4px;
+  color: var(--white);
+  text-align: center;
+}
+
+.user-info p {
+  font-size: 20px;
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+}
+
+.avatar-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.avatar-icon img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-icon .avatar-initials {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange-soft);
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* JUDUL */
+.judul {
+  margin-top: 20px;
+  padding-top: 120px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+/* RIWAYAT SECTION */
+.riwayat-section {
+  width: 377px;
+  height: 650px;
+  background: var(--orange-soft);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  margin: 0 20px 100px;
+  overflow-y: auto;
+}
+
+.filter-box h3 {
+  font-weight: 800;
+  margin-top: 20px;
+  color: var(--text-dark);
+}
+
+.filter-dropdown {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1.5px solid #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* HASIL */
+.hasil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--orange-main);
+}
+
+.hasil-header h3 {
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.hasil-header span {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+/* DAFTAR LAPORAN */
+.laporan-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.laporan-item {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.laporan-item:hover {
+  border-color: var(--orange-main);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.laporan-info {
+  flex: 1;
+}
+
+.laporan-field {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.field-label {
+  font-weight: 700;
+  color: var(--text-dark);
+  min-width: 120px;
+  font-size: 14px;
+}
+
+.field-value {
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.laporan-arrow {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--orange-main);
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* DETAIL FOTO */
+.foto-detail {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.foto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--orange-main);
+}
+
+.foto-header h4 {
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.close-btn {
+  background: var(--orange-main);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-comparison {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.foto-side {
+  flex: 1;
+  text-align: center;
+}
+
+.foto-side h5 {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.foto-container {
+  width: 100%;
+  height: 150px;
+  background: var(--orange-soft);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--orange-main);
+}
+
+.foto-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.foto-info {
+  text-align: center;
+  padding: 10px;
+  background: var(--orange-main);
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* FOOTER */
+.footer-btns {
+  width: 412px;
+  height: 81px;
+  background-color: var(--orange-main);
+  padding-bottom: 20px;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.footer-wrapper {
+  width: 100%;
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.btn-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.circle-btn {
+  width: 104px;
+  height: 104px;
+  background-color: var(--orange-soft);
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.circle-btn img {
+  width: 60px;
+  height: 60px;
+  filter: invert(66%) sepia(82%) saturate(2470%) hue-rotate(326deg) brightness(101%) contrast(101%);
+}
+
+/* Scrollbar styling */
+.laporan-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.laporan-list::-webkit-scrollbar-track {
+  background: var(--orange-soft);
+  border-radius: 3px;
+}
+
+.laporan-list::-webkit-scrollbar-thumb {
+  background: var(--orange-main);
+  border-radius: 3px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large phones (414px - 480px) */
+@media (max-width: 480px) {
+  .dashboard { width: 100%; min-height: 100vh; }
+  .dash-header { max-width: 100%; width: 100%; }
+  .riwayat-section { width: calc(100% - 40px); }
+  .footer-btns { width: 100%; max-width: 100%; }
+}
+
+/* Medium phones (375px - 414px) */
+@media (max-width: 414px) {
+  .dash-header { height: 90px; padding: 12px 15px 18px; }
+  .user-info h3 { font-size: 18px; }
+  .user-info p { font-size: 16px; }
+  .avatar-icon, .avatar-icon .avatar-initials { width: 65px; height: 65px; }
+  .judul { padding-top: 110px; }
+  .form-title { font-size: 18px; }
+  .riwayat-section { height: auto; min-height: 500px; }
+  .field-label { min-width: 100px; font-size: 12px; }
+  .field-value { font-size: 12px; }
+  .circle-btn { width: 90px; height: 90px; }
+  .circle-btn img { width: 50px; height: 50px; }
+}
+
+/* Small phones (320px - 375px) */
+@media (max-width: 375px) {
+  .dash-header { height: 80px; padding: 10px 12px 15px; }
+  .user-info h3 { font-size: 16px; }
+  .user-info p { font-size: 14px; }
+  .avatar-icon, .avatar-icon .avatar-initials { width: 55px; height: 55px; }
+  .judul { padding-top: 100px; }
+  .form-title { font-size: 16px; }
+  .riwayat-section { margin: 0 15px 90px; }
+  .foto-comparison { flex-direction: column; }
+  .footer-btns { height: 70px; }
+  .footer-wrapper { gap: 30px; padding-bottom: 40px; }
+  .circle-btn { width: 75px; height: 75px; }
+  .circle-btn img { width: 40px; height: 40px; }
+}
+
+/* Extra small phones (< 320px) */
+@media (max-width: 320px) {
+  .dash-header { height: 70px; }
+  .user-info h3 { font-size: 14px; }
+  .user-info p { font-size: 12px; }
+  .avatar-icon { width: 45px; height: 45px; }
+  .judul { padding-top: 90px; }
+  .form-title { font-size: 14px; }
+  .circle-btn { width: 65px; height: 65px; }
+  .circle-btn img { width: 35px; height: 35px; }
+}

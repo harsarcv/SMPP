@@ -1,0 +1,519 @@
+:root {
+  --orange-main: #FF9470;
+  --orange-soft: #FFE1D7;
+  --text-dark: #333;
+  --white: #fff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== HEADER ===== */
+.dash-header {
+  background: var(--orange-main);
+  color: #fff;
+  padding: 15px 20px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  z-index: 1000;
+  height: 100px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  cursor: pointer;
+  flex: 1;
+}
+
+.user-info h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 4px;
+  color: var(--white);
+  text-align: center;
+}
+
+.user-info p {
+  font-size: 20px;
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+}
+
+.avatar-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.avatar-icon img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-icon .avatar-initials {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange-soft);
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.judul {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.form-title {
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--text-dark);
+}
+
+/* ===== POPUP ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-box {
+  background: var(--orange-main);
+  color: var(--text-dark);
+  border-radius: 35px;
+  padding: 25px 20px;
+  width: 330px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.popup-box h2 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.popup-btn {
+  width: 292px;
+  background: #333;
+  color: var(--white);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== FORM LAPORAN ===== */
+.laporan-container {
+  width: 412px;
+  min-height: 917px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.laporan-form {
+  width: 377px;
+  height: 679px;
+  background: var(--orange-soft);
+  margin-bottom: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+label {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--text-dark);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.upload-box {
+  width: 322px;
+  height: 147px;
+  background: var(--orange-main);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.upload-box img {
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 5px;
+  filter: brightness(0) invert(1);
+}
+
+.upload-box p {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.btn-kirim {
+  width: 162px;
+  height: 37px;
+  background: #3A3B3B;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  margin-left: 160px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ===== FOOTER ===== */
+.footer-btns {
+  width: 412px;
+  height: 81px;
+  background-color: var(--orange-main);
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+.footer-wrapper {
+  width: 100%;
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.circle-btn {
+  width: 104px;
+  height: 104px;
+  background-color: var(--orange-soft);
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.circle-btn img {
+  width: 60px;
+  height: 60px;
+  filter: invert(66%) sepia(82%) saturate(2470%) hue-rotate(326deg) brightness(101%) contrast(101%);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large phones (414px - 480px) */
+@media (max-width: 480px) {
+  .laporan-container {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .dash-header {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .laporan-form {
+    width: 95%;
+    margin-bottom: 80px;
+  }
+
+  .footer-btns {
+    width: 100%;
+  }
+
+  .upload-box {
+    width: 100%;
+  }
+}
+
+/* Medium phones (375px - 414px) - iPhone X, 11, 12 */
+@media (max-width: 414px) {
+  .dash-header {
+    height: 90px;
+    padding: 12px 15px 18px;
+  }
+
+  .user-info h3 {
+    font-size: 18px;
+  }
+
+  .user-info p {
+    font-size: 16px;
+  }
+
+  .avatar-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .judul {
+    margin-top: 110px;
+  }
+
+  .form-title {
+    font-size: 18px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  .upload-box {
+    height: 130px;
+  }
+
+  .upload-box img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .btn-kirim {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .circle-btn {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle-btn img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Small phones (320px - 375px) - iPhone SE */
+@media (max-width: 375px) {
+  .dash-header {
+    height: 80px;
+    padding: 10px 12px 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .user-info h3 {
+    font-size: 16px;
+  }
+
+  .user-info p {
+    font-size: 14px;
+  }
+
+  .avatar-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .judul {
+    margin-top: 100px;
+  }
+
+  .form-title {
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  .laporan-form {
+    padding: 15px;
+  }
+
+  .upload-box {
+    height: 120px;
+  }
+
+  .upload-box img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .upload-box p {
+    font-size: 11px;
+  }
+
+  .btn-kirim {
+    width: 140px;
+    font-size: 16px;
+  }
+
+  .footer-btns {
+    height: 70px;
+  }
+
+  .footer-wrapper {
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+
+  .circle-btn {
+    width: 75px;
+    height: 75px;
+  }
+
+  .circle-btn img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra small phones (< 320px) */
+@media (max-width: 320px) {
+  .dash-header {
+    height: 70px;
+    padding: 8px 10px 12px;
+  }
+
+  .user-info h3 {
+    font-size: 14px;
+  }
+
+  .user-info p {
+    font-size: 12px;
+  }
+
+  .avatar-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .judul {
+    margin-top: 90px;
+  }
+
+  .form-title {
+    font-size: 14px;
+  }
+
+  .popup-box {
+    width: 280px;
+  }
+
+  .popup-box h2 {
+    font-size: 28px;
+  }
+
+  .popup-btn {
+    width: 240px;
+  }
+
+  .circle-btn {
+    width: 65px;
+    height: 65px;
+  }
+
+  .circle-btn img {
+    width: 35px;
+    height: 35px;
+  }
+}

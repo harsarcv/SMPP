@@ -1,0 +1,16 @@
+INSERT INTO zones (zone_code, name, rw_code) VALUES
+('RW01', 'Wilayah RW 01', '01'),
+('RW02', 'Wilayah RW 02', '02'),
+('RW03', 'Wilayah RW 03', '03'),
+('RW04', 'Wilayah RW 04', '04'),
+('RW05', 'Wilayah RW 05', '05'),
+('RW06', 'Wilayah RW 06', '06'),
+('RW07', 'Wilayah RW 07', '07'),
+('RW08', 'Wilayah RW 08', '08'),
+('RW09', 'Wilayah RW 09', '09'),
+('RW10', 'Wilayah RW 10', '10'),
+('RW11', 'Wilayah RW 11', '11'),
+('RW12', 'Wilayah RW 12', '12'),
+('RW13', 'Wilayah RW 13', '13'),
+('RW14', 'Wilayah RW 14', '14'),
+('RW15', 'Wilayah RW 15', '15');
